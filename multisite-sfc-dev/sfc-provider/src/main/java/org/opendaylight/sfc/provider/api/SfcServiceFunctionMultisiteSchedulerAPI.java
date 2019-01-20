@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * This class implements LoadPath aware scheduling mode.
+ * This class implements Multisite RSP module.
  *
  * <p>
  *
@@ -39,10 +39,10 @@ import org.slf4j.LoggerFactory;
  * @author Jaewook Lee (iioiioiio123@korea.ac.kr)
  * @author Hosung Beak (ghlemd@korea.ac.kr)
  * @author Sangheon Pack (shpack@korea.ac.kr)
- * @since 2018-01-20
+ * @since 2019-01-20
  */
 
-public final class SfcServiceFunctionLoadPathAwareSchedulerAPI extends SfcServiceFunctionSchedulerAPI {
+public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFunctionSchedulerAPI {
     private static final Logger LOG = LoggerFactory.getLogger(SfcServiceFunctionLoadPathAwareSchedulerAPI.class);
 
     protected SfcServiceFunctionLoadPathAwareSchedulerAPI() {
