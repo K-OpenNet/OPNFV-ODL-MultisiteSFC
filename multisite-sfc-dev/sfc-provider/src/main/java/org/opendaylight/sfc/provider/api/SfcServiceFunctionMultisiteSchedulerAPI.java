@@ -51,10 +51,10 @@ public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFun
     }
 
     /**
-     * This method finds out name of the Service Function which has lowest load
-     * (e,g., CPU Utilization) and lower path between Service Function preSfName
-     * than path threshold which is predefined value per serviceFunctionType. In
-     * this code, we define path threshold to 3.
+
+
+
+
      *
      * @param serviceFunctionType
      *            Type of Service Function to find
