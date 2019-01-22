@@ -80,9 +80,7 @@ public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFun
         }
 
         /*
-         * If this is the first SF instance selection round (i.e., preSfName ==
-         * null), find a SF instance with the lowest CPU utilization and return
-         * its name
+e
          */
         if (preSfName == null) {
             SfName sfName;
@@ -100,8 +98,7 @@ public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFun
                 }
 
                 /*
-                 * Read service function description monitor information (e.g.,
-                 * CPU utilization) of the sfName
+
                  */
                 SfcSfDescMon sfcSfDescMon = SfcProviderServiceFunctionAPI.readServiceFunctionDescriptionMonitor(sfName);
                 if (sfcSfDescMon == null) {
@@ -125,9 +122,7 @@ public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFun
 
             sfcProviderTopologyNodeName = sftServiceFunctionName;
             /*
-             * XXX noticed that SfcProviderGraph sometimes refers to SFFs as
-             * well so leaving that alone for now until a general discussion
-             * about Schedulers can be had.
+
              */
             LOG.debug("The first ServiceFunction name: {}", sfcProviderTopologyNodeName);
             return sfcProviderTopologyNodeName;
@@ -142,11 +137,7 @@ public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFun
         }
 
         /*
-         * If this is not the first SF instance selection round (i.e., preSfName
-         * != null), find an instance with the lowest CPU utilization among the
-         * instances whose hop counts to the previously selected SF instance are
-         * less than or equal to Path_threshold (default value is 3) and return
-         * its name
+
          */
         int pathLength;
         int pathThreshold = 3;
@@ -283,16 +274,6 @@ public final class SfcServiceFunctionMultisiteSchedulerAPI extends SfcServiceFun
     }
 
     /**
-     * This method finds out the load and path-aware Service Function Path for
-     * the given Service Function Chain. For each SF type in the given chain,
-     * this method calls the getServiceFunctionByType method to find an SF
-     * instance to be included in the SFP. For the first SF type in the chain,
-     * the getServiceFunctionByType method returns a name of the SF instance who
-     * has the lowest CPU utilization. From the second SF type in the chain, the
-     * getServiceFunctionByType method returns a name of the instance with the
-     * lowest CPU utilization among the instances whose hop counts to the
-     * previously selected SF instance are less than or equal to Path_threshold
-     * (default value is 3).
      *
      * <p>
      *
