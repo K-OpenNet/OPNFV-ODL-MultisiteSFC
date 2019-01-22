@@ -14,4 +14,5 @@ Target Opensource : OPNFV-ODL-SFC
 
 ### Technical Document
 
+K-ONE_#34_RSP_Construction_and_Monitoring_Method_in_Multisite
 https://github.com/K-OpenNet/K-ONE/blob/master/Technical_Documents/K-ONE_%2334_RSP_Construction_and_Monitoring_Method_in_Multisite.pdf
