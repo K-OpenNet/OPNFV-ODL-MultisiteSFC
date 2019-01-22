@@ -2,15 +2,20 @@
 
 This repository is for developing Multisite RSP feature for SFC on ODL Controller.
 
-
-
 Target Opensource : OPNFV-ODL-SFC
 
-### Software 
+
+### Proposed Software Features
+
+SDN-Orchestrator (SDN-O) has a role in scheduling Rendered Service Path (RSP) in multisite (multi ODL controller).
+
+Site Contollers construct RSP in their own site. In order to forward packet to SFF of next site, SDN-O provides tunneling method.
+
 
 ### Task Overview
 
 <img src="https://user-images.githubusercontent.com/38321970/51506136-09028600-1e2e-11e9-90f3-960e6790d6d3.png" width="90%"></img>
+
 
 ### Technical Document
 
